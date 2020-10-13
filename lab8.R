@@ -42,10 +42,6 @@ text(barp, 1, paste("total: ", vectorTotalAcc, sep="") ,cex=1, pos=3)
 totalAccMotos <- cantHechosVeh[1]
 vectorTotalAcc <- c(totalAccMotos)
 
-
-#####################################################################
-totalAccMotos <- cantHechosVeh[1]
-vectorTotalAcc <- c(totalAccMotos)
 #####################################################################
 #graficas y frecuencias de los accidentes de moto
 motos2011 <- count(importaciones[importaciones$Anio=="2011",], "Tipo.de.Vehiculo")
