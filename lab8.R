@@ -14,6 +14,9 @@ HechoTransito<-read.csv("../Data/HechoTransito.csv",stringsAsFactors = FALSE)
 VehiculosInvolucrados<-read.csv("../Data/VehiculosInvolucrados.csv",stringsAsFactors = FALSE)
 fallecidosLesionados<- read.csv("../Data/FallecidosLesionados.csv", stringsAsFactors = FALSE)
 importaciones <- read.csv("../Data/importacionesVehiculosSAT.csv", stringsAsFactors = FALSE)
+hechosC1 <- read.csv("../Data/HechoTransitoC1.csv", stringsAsFactors = FALSE)
+ane1 <- read.csv("../Data/Anexo2.csv", stringsAsFactors = FALSE)
+an2 <- read.csv("../Data/Anexo3.csv", stringsAsFactors = FALSE)
 
 # Tipo Cantidad de tipos de vehÃ?culsos durante todos los aÃ±os
 cantTipoVeh <- table(importaciones[,"Tipo.de.Vehiculo"])
@@ -36,6 +39,11 @@ barp <- barplot(cantHechosVeh[1:1],
                 names.arg = c("Motocicleta"))
 text(barp, 1, paste("total: ", vectorTotalAcc, sep="") ,cex=1, pos=3)
 
+totalAccMotos <- cantHechosVeh[1]
+vectorTotalAcc <- c(totalAccMotos)
+
+
+#####################################################################
 totalAccMotos <- cantHechosVeh[1]
 vectorTotalAcc <- c(totalAccMotos)
 #####################################################################
